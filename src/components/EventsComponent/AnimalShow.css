@@ -1,0 +1,21 @@
+.animal-div {
+  border: 2px solid green;
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 3px 4px lightslategrey;
+  border-radius: 5px;
+}
+
+.animal {
+  height: 200px;
+  width: 200px;
+}
+
+.heart {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  max-height: 200px;
+  overflow: inherit;
+}
