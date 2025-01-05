@@ -1,0 +1,32 @@
+.card {
+  border: 2px solid lightslategrey;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  width: 100px;
+}
+
+.cancel-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 2px;
+  right: 2px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: red;
+  border: none;
+  background-color: inherit;
+}
+
+.edit-btn {
+  position: absolute;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: rgb(39, 38, 38);
+  border: none;
+  background-color: inherit;
+  top: 2px;
+  right: 16px;
+}

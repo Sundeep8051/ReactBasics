@@ -1,7 +1,7 @@
-import HttpApi from "./components/HttpApiComponent/HttpApi";
+import BookApp from "./components/StateDesignForBooksManagement/BookApp";
 
 function App() {
-  return <HttpApi />;
+  return <BookApp />;
 }
 
 export default App;
