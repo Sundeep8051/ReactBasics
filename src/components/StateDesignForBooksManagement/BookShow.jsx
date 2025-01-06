@@ -1,21 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./BookShow.css";
 import BookEdit from "./BookEdit";
+import BooksContext from "../../context/BooksContext";
 
 /* eslint-disable react/prop-types */
-const BookShow = ({ book, onDelete, onEdit }) => {
+const BookShow = ({ book }) => {
   const [showEdit, setShowEdit] = useState(true);
+
+  const { onDeleteBook } = useContext(BooksContext);
+
   const handleDelete = () => {
-    onDelete(book.id);
+    onDeleteBook(book.id);
   };
 
   const handleShowEdit = () => {
     setShowEdit(!showEdit);
   };
 
-  const handleBookEdit = (editedTitle) => {
+  const handleBookEdit = () => {
     setShowEdit(!showEdit);
-    onEdit({ id: book.id, title: editedTitle });
   };
 
   const content = showEdit ? (

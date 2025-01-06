@@ -1,15 +1,15 @@
+import { useContext } from "react";
 import "./BookList.css";
 
-/* eslint-disable react/prop-types */
 import BookShow from "./BookShow";
+import BooksContext from "../../context/BooksContext";
 
-const BookList = ({ books, onDelete, onEdit }) => {
+function BookList() {
+  const { books } = useContext(BooksContext);
   var renderedBooks = books.map((book) => {
-    return (
-      <BookShow onEdit={onEdit} onDelete={onDelete} book={book} key={book.id} />
-    );
+    return <BookShow book={book} key={book.id} />;
   });
   return <div className="book-list">{renderedBooks}</div>;
-};
+}
 
 export default BookList;

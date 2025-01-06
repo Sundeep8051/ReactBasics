@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import BooksContext from "../../context/BooksContext";
 
-/* eslint-disable react/prop-types */
-const BookCreate = ({ onCreate }) => {
+function BookCreate() {
   const [input, setInput] = useState("");
+
+  const { onCreateBook } = useContext(BooksContext);
 
   const handleOnChange = (e) => {
     setInput(e.target.value);
@@ -10,7 +12,7 @@ const BookCreate = ({ onCreate }) => {
 
   const handleAddBook = (e) => {
     e.preventDefault();
-    onCreate(input);
+    onCreateBook(input);
     setInput("");
   };
   return (
@@ -22,6 +24,6 @@ const BookCreate = ({ onCreate }) => {
       </form>
     </div>
   );
-};
+}
 
 export default BookCreate;

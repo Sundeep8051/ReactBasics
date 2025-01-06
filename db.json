@@ -1,8 +1,12 @@
 {
   "books": [
     {
-      "title": "Test 123",
+      "title": "JS 101",
       "id": 1
+    },
+    {
+      "title": "React 101",
+      "id": 2
     }
   ]
 }
