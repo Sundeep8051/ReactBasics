@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useCallback, useState } from "react";
 import axios from "axios";
 
 const BooksContext = createContext();
@@ -12,6 +12,8 @@ function Provider({ children }) {
     const result = await axios.get(baseBooksDbUrl);
     setBooks(result.data);
   };
+
+  const stableFetchBooks = useCallback(fetchBooks, []);
 
   const onCreateBook = async (title) => {
     const res = await axios.post(baseBooksDbUrl, {
@@ -47,7 +49,7 @@ function Provider({ children }) {
     onCreateBook,
     onEditBook,
     onDeleteBook,
-    fetchBooks,
+    stableFetchBooks,
     books,
   };
 
