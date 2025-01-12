@@ -1,11 +1,16 @@
-import BookApp from "./components/StateDesignForBooksManagement/BookApp";
-import { Provider } from "./context/BooksContext";
+// import BookApp from "./components/StateDesignForBooksManagement/BookApp";
+// import { Provider } from "./context/BooksContext";
+
+import AccordionPage from "./components/ReusableComponents/Accordion/AccordionPage";
 
 function App() {
   return (
-    <Provider>
-      <BookApp />
-    </Provider>
+    // <Provider>
+    //   <BookApp />
+    // </Provider>
+    <div>
+      <AccordionPage />
+    </div>
   );
 }
 
