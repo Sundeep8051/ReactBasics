@@ -1,7 +1,9 @@
 // import BookApp from "./components/StateDesignForBooksManagement/BookApp";
 // import { Provider } from "./context/BooksContext";
 
-import AccordionPage from "./components/ReusableComponents/Accordion/AccordionPage";
+import DropdownPage from "./components/ReusableComponents/Dropdown/DropdownPage";
+
+// import AccordionPage from "./components/ReusableComponents/Accordion/AccordionPage";
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
     //   <BookApp />
     // </Provider>
     <div>
-      <AccordionPage />
+      <DropdownPage />
     </div>
   );
 }
