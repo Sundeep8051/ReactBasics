@@ -19,8 +19,17 @@ function BookCreate() {
     <div>
       <form>
         <label>Title: </label>
-        <input value={input} onChange={handleOnChange} />
-        <button onClick={handleAddBook}>Create</button>
+        <input
+          className="border-4 bg-amber-50"
+          value={input}
+          onChange={handleOnChange}
+        />
+        <button
+          className="mx-3 border-4 bg-blue-400 px-2 py-1 rounded"
+          onClick={handleAddBook}
+        >
+          Create
+        </button>
       </form>
     </div>
   );

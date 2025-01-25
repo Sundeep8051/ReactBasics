@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 svg {
-  margin-right: 5px;
+    margin-right: 5px;
+}
+
+* {
+    margin: 10px;
 }
