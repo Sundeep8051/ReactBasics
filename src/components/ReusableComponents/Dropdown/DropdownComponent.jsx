@@ -1,9 +1,28 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GoChevronDown, GoChevronRight } from "react-icons/go";
+import PanelComponent from "../Panel/PanelComponent.jsx";
 
 /* eslint-disable react/prop-types */
 const DropdownComponent = ({ options, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const divEl = useRef();
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (!divEl.current) {
+        return;
+      }
+      if (!divEl.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handler, true);
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, []);
 
   const handleClick = () => {
     setIsOpen((currentIsOpen) => !currentIsOpen);
@@ -26,10 +45,10 @@ const DropdownComponent = ({ options, value, onChange }) => {
     );
   });
   return (
-    <div className="w-48 relative">
-      <div
+    <div ref={divEl} className="w-48 relative">
+      <PanelComponent
         onClick={handleClick}
-        className="flex justify-center cursor-pointer items-center border rounded p-3 shadow bg-white w-full"
+        className="flex justify-center cursor-pointer items-center"
       >
         {value || "Select..."}
         {isOpen ? (
@@ -37,11 +56,11 @@ const DropdownComponent = ({ options, value, onChange }) => {
         ) : (
           <GoChevronRight className="mx-2" />
         )}
-      </div>
+      </PanelComponent>
       {isOpen && (
-        <div className="absolute top-full border rounded p-3 shadow bg-white w-full">
+        <PanelComponent className="absolute top-full">
           {renderedOptions}
-        </div>
+        </PanelComponent>
       )}
     </div>
   );
