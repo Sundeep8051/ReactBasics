@@ -5,6 +5,7 @@ import DropdownPage from "../ReusableComponents/Dropdown/DropdownPage.jsx";
 import AccordionPage from "../ReusableComponents/Accordion/AccordionPage.jsx";
 import ButtonPage from "../ReusableComponents/Button/ButtonPage.jsx";
 import SidebarComponent from "./SidebarComponent.jsx";
+import ModalPage from "../ReusableComponents/Modal/ModelPage.jsx";
 
 const NavigationComponent = () => {
   return (
@@ -19,6 +20,9 @@ const NavigationComponent = () => {
         </Route>
         <Route path="/button">
           <ButtonPage />
+        </Route>
+        <Route path="/modal">
+          <ModalPage />
         </Route>
         <Route path="/">
           <DropdownPage />
