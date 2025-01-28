@@ -6,6 +6,7 @@ const Links = [
   { label: "Button", path: "/button" },
   { label: "Dropdown", path: "/dropdown" },
   { label: "Modal", path: "/modal" },
+  { label: "Table", path: "/table" },
 ];
 
 const SidebarComponent = () => {

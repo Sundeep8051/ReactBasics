@@ -6,6 +6,7 @@ import AccordionPage from "../ReusableComponents/Accordion/AccordionPage.jsx";
 import ButtonPage from "../ReusableComponents/Button/ButtonPage.jsx";
 import SidebarComponent from "./SidebarComponent.jsx";
 import ModalPage from "../ReusableComponents/Modal/ModelPage.jsx";
+import TablePage from "../ReusableComponents/Table/TablePage.jsx";
 
 const NavigationComponent = () => {
   return (
@@ -26,6 +27,9 @@ const NavigationComponent = () => {
         </Route>
         <Route path="/">
           <DropdownPage />
+        </Route>
+        <Route path="/table">
+          <TablePage />
         </Route>
       </div>
     </NavigationProvider>
