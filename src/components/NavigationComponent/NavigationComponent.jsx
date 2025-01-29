@@ -8,6 +8,7 @@ import SidebarComponent from "./SidebarComponent.jsx";
 import ModalPage from "../ReusableComponents/Modal/ModelPage.jsx";
 import TablePage from "../ReusableComponents/Table/TablePage.jsx";
 import CounterPage from "../CustomHookComponent/CounterPage.jsx";
+import CounterReducerComponent from "../ReducerComponent/CounterReducerComponent.jsx";
 
 const NavigationComponent = () => {
   return (
@@ -34,6 +35,9 @@ const NavigationComponent = () => {
         </Route>
         <Route path="/counter">
           <CounterPage initialCount={10} />
+        </Route>
+        <Route path="/counter-reduce">
+          <CounterReducerComponent />
         </Route>
       </div>
     </NavigationProvider>

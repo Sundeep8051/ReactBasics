@@ -8,6 +8,7 @@ const Links = [
   { label: "Modal", path: "/modal" },
   { label: "Table", path: "/table" },
   { label: "Counter", path: "/counter" },
+  { label: "CounterReduce", path: "/counter-reduce" },
 ];
 
 const SidebarComponent = () => {
